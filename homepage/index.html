@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium School - 미래 교육의 중심</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">SCHOOL</div>
+            <div class="nav-links">
+                <a href="#school-intro">학교 소개</a>
+                <a href="#dept-intro">학과 소개</a>
+                <a href="#portfolio">포트폴리오</a>
+                <a href="#school-life">학교생활</a>
+                <a href="#" id="nav-ai-chat" class="nav-ai-btn">🤖 AI 상담</a>
+                <a href="#bulletin" class="nav-btn">커뮤니티</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="reveal-text">Future Education<span class="sparkle">✦</span></h1>
+            <p class="reveal-text">가장 삼성다운, 가장 프리미엄한 학교 홈페이지를 만나보세요.</p>
+        </div>
+        <div class="hero-image-wrap">
+            <img src="images/futuristic_hero.png" alt="Hero Image" class="main-hero-img">
+        </div>
+    </section>
+
+    <!-- Evaluation Criteria Section -->
+    <section class="section eval-section" id="eval-criteria">
+        <div class="container">
+            <div class="section-tag">Quality Standards</div>
+            <h2 class="section-title">홈페이지 완성도 평점 가이드</h2>
+            <div class="eval-grid">
+                <div class="eval-card">
+                    <span class="eval-num">01</span>
+                    <span class="eval-score">30점</span>
+                    <h3>시각적 디자인 및 UI/UX</h3>
+                    <ul>
+                        <li>색상과 타이포그래피의 일관성</li>
+                        <li>명확한 시각적 계층 구조</li>
+                        <li>부드러운 마이크로 인터랙션</li>
+                    </ul>
+                </div>
+                <div class="eval-card">
+                    <span class="eval-num">02</span>
+                    <span class="eval-score">20점</span>
+                    <h3>기술적 기능성 및 성능</h3>
+                    <ul>
+                        <li>파이어베이스 실시간 연동</li>
+                        <li>이미지 및 로딩 속도 최적화</li>
+                        <li>정확한 네비게이션 링크</li>
+                    </ul>
+                </div>
+                <div class="eval-card">
+                    <span class="eval-num">03</span>
+                    <span class="eval-score">30점</span>
+                    <h3>콘텐츠 및 스토리텔링</h3>
+                    <ul>
+                        <li>로봇소프트웨어과 혁신성 전달</li>
+                        <li>포트폴리오 논리적 구성</li>
+                        <li>텍스트 가독성 확보</li>
+                    </ul>
+                </div>
+                <div class="eval-card">
+                    <span class="eval-num">04</span>
+                    <span class="eval-score">20점</span>
+                    <h3>반응형 및 접근성</h3>
+                    <ul>
+                        <li>모바일 레이아웃 최적화</li>
+                        <li>크로스 브라우징 호환성</li>
+                        <li>Alt 태그 및 키보드 접근성</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="eval-footer-tip">
+                <p>💡 <strong>팁:</strong> 이 기준을 통해 프로젝트의 완성도를 높여보세요. 특히 파이어베이스 연동은 기술 역량의 핵심입니다!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="section" id="school-intro">
+        <div class="container">
+            <h2 class="section-title">🏫 학교 소개</h2>
+            <p>우리 학교는 최첨단 시설과 혁신 교육을 자랑합니다.</p>
+        </div>
+    </section>
+
+    <!-- Samsung Style AI Chatbot UI -->
+    <div class="ai-ai-container">
+        <div id="ai-tooltip" class="ai-tooltip">
+            <p>갤럭시 AI가 입학 상담을 도와드립니다.<br>지금 클릭해 보세요!</p>
+            <span id="tooltip-close" class="tooltip-close">&times;</span>
+        </div>
+        <div id="chatbot-fab" class="chatbot-fab-sparkle">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z" fill="url(#paint_grad)"/>
+                <defs><linearGradient id="paint_grad" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#42C2FF"/></linearGradient></defs>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window">
+        <div class="chat-header"><h3>AI 상담 매니저</h3></div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="질문을 입력하세요...">
+            <button id="chat-send">↑</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
